@@ -1,3 +1,11 @@
+
+def strandAware(p, t):
+    total = []
+    total.append(strandAware.naive(p, t))
+    
+    newP = reverseComplement(p)
+    total.append(strandAware.naive(newP, t))
+
 def naive(p, t):
     occurrences = []
     for i in range(len(t) - len(p) + 1):  # loop over alignments
